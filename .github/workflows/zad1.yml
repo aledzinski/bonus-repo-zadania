@@ -1,0 +1,14 @@
+name: Zad1 - manual job
+
+
+on:
+  workflow_dispatch: # MANUAL TRIGGER
+ 
+jobs:
+  display-env-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print OS on console
+        run: |
+          echo "Running job on:"
+          echo ${{ runner.os }}
